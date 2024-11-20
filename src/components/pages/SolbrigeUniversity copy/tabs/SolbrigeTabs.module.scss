@@ -1,0 +1,379 @@
+.tabComponent {
+  margin-top: 20px;
+  padding: 70px 0 70px;
+  .tabs {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 65px;
+    background: rgba(245, 245, 245, 1);
+
+    button {
+      height: 100%;
+      padding: 10px 15px;
+      flex-grow: 1;
+      background: rgba(245, 245, 245, 1);
+      cursor: pointer;
+      transition: background 0.3s;
+      color: rgba(33, 33, 33, 1);
+      border: 0;
+      font-family: Montserrat;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 26.82px;
+
+      &.active {
+        border-bottom: solid 2px rgba(255, 106, 106, 1);
+      }
+    }
+  }
+
+  .shares {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26.82px;
+
+    .links {
+      display: flex;
+      gap: 15px;
+    }
+
+  }
+
+  .blue {
+    color: #1a8ee6;
+  }
+
+  .fr {
+    width: 26px;height: 26px;
+    background-color: #FF6A6A;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;font-weight: 700;
+    color: white;
+  }
+
+  .tabContent {
+
+    padding-top: 30px;
+    background: #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+
+    h1 {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 43.88px;
+      text-align: left;
+    }
+
+    h2 {
+      color: #1a8ee6;
+      font-family: Montserrat;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 26.82px;
+      margin-top: 5px;
+    }
+
+    .grid {
+      width: 100%;
+      margin: 5px 0;
+      color: #333;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4pc;
+      padding: 20px 0;
+      font-size: 22px;
+      
+      strong {
+        font-weight: bold;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+  }
+}
+
+.imagesStudents {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 40px;
+  .image {
+    width: 100%;
+    max-width: 369px;
+    height: 342px;
+    border-radius: 2px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+}
+
+.mom {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 50px;
+  .block {
+    // min-width: 448px;
+    min-height: 800px;
+    padding: 30px 30px 50px;
+    box-shadow: 4.61px 7.37px 22.11px 0px #0000001A;
+
+    h3 {
+      width: 100%;
+      background: rgba(26, 162, 238, 1);
+      font-size: 18px;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+      .importantFont {
+        font-size: 22px !important;
+      }
+    }
+
+    .iconTextRow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+
+      img {
+        width: 46px;
+        height: 46px;
+      }
+
+      p {
+
+        font-size: 18px;
+        color: #333;
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  .tabComponent {
+    .tabContent {
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+    .imagesStudents {
+      gap: 40px;
+      .image {
+        width: 100%;
+        max-width: 369px;
+        height: 272px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .tabComponent {
+    margin-top: 10px;
+
+    .tabs {
+      display: flex;
+      flex-direction: row;
+      button {
+        width: 100%;
+        font-size: 18px;
+        padding: 8px 12px;
+      }
+    }
+
+    .tabContent {
+      padding: 10px;
+      font-size: 14px;
+      .grid {
+        max-width: 100%;
+        grid-template-columns: 2fr 3fr;
+        font-size: 18px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        padding: 10px;
+      }
+    }
+
+    .mom {
+      flex-direction: column;
+      padding: 10px;
+
+      .block {
+        max-width: 448px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        
+
+        h3 {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .imagesStudents {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .tabComponent {
+    margin-top: 5px;
+
+    .tabs {
+      gap: 5px;
+
+      button {
+        font-size: 18px;
+      }
+    }
+
+    .tabContent {
+      padding: 5px;
+      font-size: 12px;
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      h1 {
+        font-size: 18px;
+        line-height: 21.94px;
+      }
+      
+      h2 {
+        line-height: 21.94px;
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+        padding: 5px;
+      }
+    }
+
+    .mom {
+      padding: 5px;
+
+      .block {
+        padding: 10px;
+
+        h3 {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .imagesStudents {
+      padding: 0;
+      gap: 10px;
+
+      .image {
+        height: 200px;
+      }
+    }
+  }
+}
+@media (max-width: 385px) {
+  .tabComponent {
+    margin-top: 5px;
+
+    .tabs {
+      gap: 5px;
+
+      button {
+        font-size: 16px;
+      }
+    }
+
+    .tabContent {
+      padding: 5px;
+      font-size: 12px;
+      h1 {
+        font-size: 16px !important;
+        line-height: 21.94px;
+      }
+      
+      h2 {
+        line-height: 21.94px;
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+        padding: 5px;
+      }
+    }
+
+    .mom {
+      padding: 5px;
+
+      .grid {
+        gap: 10px;
+        padding: 0 0 10px;
+        font-size: 14px;
+        strong {
+          font-size: 18px;
+        }
+        &:first-child {
+          margin-top: 30px;
+        }
+      }
+
+      .block {
+        padding: 10px;
+        font-size: 16px;
+        h3 {
+          font-size: 12px;
+          strong {
+            font-size: 16px !important;
+          }
+        }
+        .shares {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .imagesStudents {
+      padding: 0;
+      gap: 20px;
+
+        .image {
+          height: 142px;
+          max-width: 157px;
+        }
+    }
+  }
+}

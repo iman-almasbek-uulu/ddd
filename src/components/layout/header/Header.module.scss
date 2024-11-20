@@ -1,0 +1,99 @@
+#Header {
+  padding: 25px 0;
+  box-shadow: 5px 8px 24px 0px #0000001a;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  backdrop-filter: blur(40px);
+  .Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .Header_nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 500px;
+      a {
+        text-decoration: none;
+        color: black;
+        &.active {
+          position: relative;
+          
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            border-radius: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: #FF6A6A;
+          }
+        }
+      }
+    }
+    .Header_buttons {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      .SearchContainer {
+        position: relative;
+        .SearchIcon {
+          position: absolute;
+          top: 30%;
+          left: 5px;
+          font-size: 20px;
+        }
+      }
+      input {
+        width: 187px;
+        height: 43px;
+        background: #fffffff2;
+        border: 0.8px solid #5609bb33;
+        border-radius: 10px;
+        padding: 20px;
+        z-index: 10;
+        outline: none;
+        font-size: 20px;
+      }
+      .focus {
+        position: relative;
+        top: 0;
+        border: none;
+        background: none;
+      }
+
+      select {
+        background: 0;
+        border: none;
+        font-size: 18px;
+        outline: none;
+      }
+    }
+  }
+  .search_modal {
+    width: 100%;
+    position: absolute;
+    padding: 50px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 0px 9px 0px #0000000D;
+    a {
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19.5px;
+      text-align: left;
+      color: #212121;
+    }
+
+  }
+}

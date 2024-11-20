@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill sans", sans-serif;
+}
+
+html {
+  color-scheme: white;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+
+.App {
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: #FDFDFD;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* From Uiverse.io by vinodjangid07 */
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  width: 30px;
+  height: 30px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: 0.3s;
+  position: absolute;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+/* #checkbox:checked + .toggle .bars {
+  margin-left: 13px;
+} */
+
+#checkbox:checked + .toggle #bar2 {
+  transform: translateY(14px) rotate(60deg);
+  margin-left: 0;
+  transform-origin: right;
+  transition-duration: 0.3s;
+  z-index: 2;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  transform: translateY(28px) rotate(-60deg);
+  transition-duration: 0.3s;
+  transform-origin: left;
+  z-index: 1;
+}
+
+#checkbox:checked + .toggle {
+  transform: rotate(-90deg);
+}
+/* #checkbox:checked + .toggle #bar3 {
+  transform: rotate(90deg);
+  transition-duration: .3s;
+  transform-origin:right;
+} */
+
+.Search {
+  padding-top: 20px;
+  display: none;
+  width: 100%;
+  max-width: 300px;
+  margin-left: 20px;
+  @media (max-width:1000px) {
+    display: block;
+  }
+  >div {
+    position: relative;
+    div {
+      width: 100%;
+      position: absolute;
+
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 50px 20px 10px;
+      gap: 10px;
+      border-radius: 8px;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      background-color: white;
+      box-shadow: 0px 0px 9px 0px #0000000D;
+    }
+    a {
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19.5px;
+      text-align: left;
+      color: #212121;
+    }
+  }
+  input {
+    width: 100%;
+    height: 43px;
+    background: #fffffff2;
+    border: 0.8px solid #5609bb33;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 10;
+    outline: none;
+    font-size: 20px;
+  }
+  .focus2 {
+    position: relative;
+    top: 0;
+    border: none;
+    background: none;
+  }
+}
+
+
+
+
+@font-face {
+  font-family: "Gilroy";
+
+  src: url(./assets/fonts/gilroy/Gilroy-Medium.ttf);
+  font-weight: 500;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");

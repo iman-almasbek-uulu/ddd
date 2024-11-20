@@ -1,0 +1,359 @@
+.AboutPage {
+  padding: 50px 0;
+  .Block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+    .imagesBlock {
+      position: relative;
+
+      .img {
+        width: auto;
+        height: auto;
+        bottom: -60px;
+        left: 40px;
+        position: relative;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        border: 3px solid rgba(33, 33, 33, 1);
+        transform: translate(-10px, -10px);
+        width: 493px;
+        height: 496px;
+        bottom: -100px;
+        left: 10px;
+        gap: 0px;
+        border: 3px 0px 0px 0px;
+        opacity: 0.8px;
+      }
+    }
+
+    .textBlock {
+      max-width: 500px;
+      margin-top: 75px;
+
+      h3 {
+        color: #4a90e2;
+        font-weight: bold;
+        font-size: 25px;
+        font-size: clamp(16px, 5vw + 10px, 25px);
+        font-weight: 700;
+        line-height: 32px;
+        text-align: left;
+      }
+
+      h1 {
+        font-weight: bold;
+        margin: 10px 0;
+        font-size: clamp(28px, 3vh + 10px, 52px);
+        font-weight: 500;
+        line-height:clamp(38px, 5vw + 10px, 64px) ;
+        text-align: left;
+      }
+      .P {
+        font-weight: bold;
+        font-size: clamp(18px, 5vw + 10px, 25px);
+        font-weight: 400;
+        line-height: 32px;
+        line-height:clamp(21px, 5vw + 10px, 32px) ;
+
+        text-align: left;
+      }
+
+      p {
+
+        color: #666;
+        line-height: 1.6;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        text-align: left;
+
+        &:first-of-type {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  .T {
+    text-align: center;
+    margin: 190px 0 120px;
+  }
+  .OurTeam {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: stretch;
+    width: 100%;
+    gap: 100px;
+    
+    .TeamMember {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 3.35px 5.37px 16.1px 0px #0000001A;
+  
+      img {
+        width: 100%;
+        height: 309px;
+        object-fit: cover;
+        margin-bottom: 30px;
+      }
+  
+      h1 {
+        font-size: 1rem;
+        margin: 10px 0 5px;
+      }
+  
+      h3 {
+        font-size: 0.9rem;
+        color: rgba(123, 106, 255, 0.5);
+        margin-bottom: 30px;
+
+      }
+    }
+  
+    /* Для каждого третьего элемента */
+    // .TeamMember:nth-child(3n) {
+    //   grid-column: 3 / 4; /* Устанавливаем каждый третий элемент в правую колонку */
+    // }
+  }
+}
+
+@media (max-width: 1034px) {
+  .AboutPage {
+    .About {
+      .Block {
+        .imagesBlock {
+          .img {
+            img {
+              width: 374px;
+              height: auto;
+            }
+            left: 40px;
+            bottom: 0px;
+          }
+          &::before {
+            bottom: -50px;
+            width: 330px;
+            height: 332px;
+            border: 2.01px 0px 0px 0px;
+            opacity: 0.8px;
+
+          }
+        }
+        .textBlock {
+          margin: 0;
+        }
+      }
+    }
+    .T {
+      text-align: center;
+      margin: 100px 0;
+    }
+    .OurTeam {
+      gap: 50px;
+      
+      .TeamMember {
+    
+        img {
+          height: 218px;
+          margin-bottom: 30px;
+        }
+    
+        h1 {
+          margin: 10px 0 5px;
+        }
+    
+        h3 {
+          font-size: 0.9rem;
+          margin-bottom: 30px;
+  
+        }
+      }
+    
+      /* Для каждого третьего элемента */
+      // .TeamMember:nth-child(3n) {
+      //   grid-column: 3 / 4; /* Устанавливаем каждый третий элемент в правую колонку */
+      // }
+    }
+  }
+}
+@media (max-width: 834px) {
+  .AboutPage {
+    .About {
+      .Block {
+        // align-items: center;
+        .imagesBlock {
+          .img {
+            img {
+              width: 304px;
+              height: auto;
+            }
+            left: 40px;
+            bottom: 0px;
+          }
+          &::before {
+            bottom: -30px;
+            width: 300px;
+            height: 302px;
+            border: 2.01px 0px 0px 0px;
+            opacity: 0.8px;
+
+          }
+        }
+      }
+
+    }
+    .OurTeam {
+      gap: 50px;
+      grid-template-columns: repeat(2,1fr);
+      .TeamMember {
+    
+        img {
+          height: 218px;
+          margin-bottom: 30px;
+        }
+    
+        h1 {
+          margin: 10px 0 5px;
+        }
+    
+        h3 {
+          font-size: 0.9rem;
+          margin-bottom: 30px;
+  
+        }
+      }
+    
+
+    }
+  }
+}
+@media (max-width: 768px) {
+  .AboutPage {
+    .About {
+      .Block {
+        // align-items: center;
+        flex-direction: column-reverse;
+        .imagesBlock {
+          margin: 0 auto;
+          .img {
+            img {
+              width: 60vw;
+              height: auto;
+              
+            }
+            left: 40px;
+            bottom: 0px;
+          }
+          &::before {
+            bottom: -30px;
+            width: 60vw;
+            height: 60vw;
+            border: 2.01px 0px 0px 0px;
+            opacity: 0.8px;
+
+          }
+        }
+        .textBlock {
+          max-width: 100%;
+
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .AboutPage {
+    .About {
+      .Block {
+        gap: 20px;
+
+        .imagesBlock {
+          margin: 0 auto;
+          .img {
+            width: 90%;
+            left: 10%;
+            img {
+              width: 100%;
+              height: auto;
+              
+            }
+          }
+          &::before {
+            bottom: -30px;
+            width: 90%;
+            height: 80vw;
+            left: 10px;
+          }
+        }
+        .textBlock {
+          max-width: 100%;
+
+        }
+      }
+
+    }
+    .OurTeam {
+      gap: 30px;
+      grid-template-columns: repeat(2,1fr);
+      .TeamMember {
+    
+        img {
+          height: 218px;
+          margin-bottom: 20px;
+        }
+    
+        h1 {
+          margin: 10px 0 5px;
+        }
+    
+        h3 {
+          font-size: 0.9rem;
+          margin-bottom: 20px;
+  
+        }
+      }
+    
+
+    }
+  }
+}
+@media (max-width: 435px) {
+  .AboutPage {
+    .T {
+      text-align: left;
+      margin: 100px 0 50px;
+    }
+    .OurTeam {
+      gap: 50px;
+      grid-template-columns: repeat(1,1fr);
+      .TeamMember {
+    
+        img {
+          height: 218px;
+          margin-bottom: 20px;
+        }
+    
+        h1 {
+          margin: 10px 0 5px;
+        }
+    
+        h3 {
+          font-size: 0.9rem;
+          margin-bottom: 20px;
+  
+        }
+      }
+    
+
+    }
+  }
+}

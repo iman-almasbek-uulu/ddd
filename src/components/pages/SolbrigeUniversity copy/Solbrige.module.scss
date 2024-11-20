@@ -1,0 +1,241 @@
+#Solbrige {
+  .solbrige {
+    .T {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 48.52px;
+      color: rgba(26, 162, 238, 1);
+      margin: 100px 0 60px;
+    }
+
+    .Block {
+      display: flex;
+      gap: 100px;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .img {
+        width: 554px;
+        height: 553px;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .blockText {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 448px;
+        width: 100%;
+        >div {
+          width: 100%;
+
+        }
+        .Bl1 {
+          display: flex;
+          border: 1px solid rgba(187, 187, 187, 1);
+          border-radius: 1.84px;
+          text-align: center;
+          .TT {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            color: #333;
+            text-align: start;
+            padding: 20px;
+          }
+          .flex {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-left: 10px;
+            font-family: Montserrat;
+            font-weight: 700;
+            line-height: 19.5px;
+
+          }
+          span {
+              font-weight: bold;
+              color: #666;
+              letter-spacing: 1.5px;
+          }
+        }
+        
+        h1 {
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+          font-size: 20px;
+          font-weight: 500;
+          letter-spacing: 1.5px;
+          color: #333;
+          text-align: left;
+          border: 1px solid rgba(187, 187, 187, 1);
+          padding: 15px 30px;
+          line-height: 21px;
+
+          span {
+            font-weight: bold;
+            color: #666;
+            letter-spacing: 1.5px;
+          }
+        }
+      }
+    }
+
+     
+  }
+}
+
+
+@media (max-width: 1034px) {
+  #Solbrige {
+    .solbrige {
+      .Block {
+  
+        .blockText {
+          max-width: 380px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  #Solbrige {
+    .solbrige {
+      .T {
+        font-size: 35px;
+        line-height: 48.52px;
+        margin: 80px 0 40px;
+      }
+  
+      .Block {
+        gap: 50px;
+        .img {
+          width: 554px;
+          height: 453px;
+        }
+  
+        .blockText {
+          gap: 10px;
+          max-width: 300px;
+          .Bl1 {
+            .TT {
+              font-size: 18px;
+              letter-spacing: 1.5px;
+              padding: 20px;
+            }
+            span {
+              letter-spacing: 1.5px;
+            }
+          }
+          
+          h1 {
+            font-size: 18px;
+            padding: 15px;
+  
+            span {
+              letter-spacing: 1.5px;
+            }
+          }
+        }
+      }
+  
+       
+    }
+  }
+  
+}
+@media (max-width: 600px) {
+  #Solbrige {
+    .solbrige {
+      .T {
+        font-size: 30px;
+        line-height: 48.52px;
+        margin: 60px 0 30px;
+      }
+  
+      .Block {
+        gap: 50px;
+        flex-direction: column;
+        .img {
+          width: 100%;
+          height: 453px;
+        }
+  
+        .blockText {
+          gap: 10px;
+          width: 100%;
+          max-width: 100%;
+          .Bl1 {
+            box-shadow: -1px 0px 23px 1px #CFCFCF33;
+            border: 0;
+            .TT {
+              letter-spacing: 1.5px;
+              padding: 20px;
+            }
+            span {
+              letter-spacing: 1.5px;
+            }
+          }
+          
+          h1 {
+            padding: 15px;
+            width: 100%;
+            span {
+              letter-spacing: 1.5px;
+            }
+          }
+        }
+      }
+  
+       
+    }
+  }
+  
+}
+@media (max-width: 434px) {
+  #Solbrige {
+    .solbrige {
+      .T {
+        font-size: 24px;
+        line-height: 48.52px;
+        margin: 60px 0 20px;
+      }
+  
+      .Block {
+        gap: 30px;
+        flex-direction: column;
+        .img {
+          width: 100%;
+          height: 300px;
+        }
+  
+        .blockText {
+          gap: 10px;
+          width: 100%;
+
+          .Bl1 {
+            .TT {
+              font-size: 16px;
+              padding: 20px;
+            }
+          }
+          
+          h1 {
+            font-size: 16px;
+            padding: 15px;
+            width: 100%;
+          }
+        }
+      }
+  
+       
+    }
+  }
+  
+}
